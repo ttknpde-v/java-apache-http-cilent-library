@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app  version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+    <!-- <web-app> represents the whole application. -->
+    <display-name>Archetype Created Web Application</display-name>
+
+    <servlet>
+        <!-- <servlet> is sub element of <web-app> and represents the servlet. -->
+        <servlet-name>servlet</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <!--
+        <servlet-name> is sub element of <servlet> represents the name of the servlet.
+        <servlet-class> is sub element of <servlet> represents the class of the servlet.-->
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>servlet.xml</param-value>
+            <!--   path of servlet   -->
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <!-- <servlet-mapping> is sub element of <web-app>. It is used to map the servlet. -->
+        <servlet-name>servlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+</web-app>
